@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.stickman-head, .stickman-body
+, .stickman-handR, .stickman-handL
+, .stickman-legR, .stickman-legL
+{
+    font-size: 64px;
+}
+#sticktik{
+   position: absolute;
+   top: 10%;
+   border-bottom: 4px solid black;
+   font-family: cursive;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(255, 255 , 255, .75), rgba(0, 0, 0, .75)), url(img/bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.stickman{
+    width: 50%;
+    height: 50%;
+    position: relative;
+    background-color: white;
+    border-radius: 16px;
+    
+}
+
+.stickman-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    color: black;
+}
+.stickman-body{
+    background-color: #000;
+    height: 50%;
+    width: 3px;
+    position: absolute;
+    left: 50%;
+
+}
+.stickman-handR{
+    position: absolute;
+    left: 40%;
+    top: 10%;
+    font-weight: 900;
+}
+.stickman-handL{
+    position: absolute;
+    left: 53%;
+    top: 10%;
+    font-weight: 900;
+}
+.stickman-legR{
+    position: absolute;
+    left: 46%;
+    top: 69%;
+    background-color: #000;
+    height: 5.5rem;
+    width: 3px;
+    transform: rotate(39deg);
+}
+.stickman-legL{
+    position: absolute;
+    left: 54%;
+    top: 69%;
+    background-color: #000;
+    height: 5.5rem;
+    width: 3px;
+    transform: rotate(-39deg);
+}
+.hoverR h1, .hoverL h1{
+    font-family: cursive;
+    font-size: 16px !important;
+}
+.hoverR{
+    position: absolute;
+    top: 29%;
+    left: 34%;
+    height: 42%;
+    width: 25%;
+    color: transparent; /*Para hindi makita yung text*/
+    
+}
+.hoverL{
+    position: absolute;
+    top: 29%;
+    left: 42%;
+    height: 42%;
+    width: 25%;
+    color: transparent; /*Para hindi makita yung text*/
+}
+
+.hoverR:hover{
+    /* border: 3px solid #2e2e2e; */
+    border-right: 4px solid #000;
+    padding-right: 60px;
+    border-bottom-right-radius: 35%; /*para mag curve yung body*/ 
+    border-top-right-radius: 35%;
+    padding: 60px 60px 60px 0;
+    background-color: white;  /*para matakpan yung body*/
+    /* height: 40%;
+    width: 40%; */
+    position: absolute;
+    z-index: 99999;
+    /* color: white; */
+    transition: all 150ms linear;
+   
+}
+
+.hoverL:hover{
+    /* border: 3px solid #2e2e2e; */
+    border-left: 4px solid #000;
+    padding-right: 60px;
+    border-bottom-left-radius: 35%; /*para mag curve yung body*/
+    border-top-left-radius: 35%;
+    padding: 60px 0 60px 60px;
+    background-color: white; /*para matakpan yung body*/
+    /* height: 40%;
+    width: 40%; */
+    position: absolute;
+    z-index: 99999;
+    /* color: white; */
+    transition: all 150ms linear;
+   
+}
